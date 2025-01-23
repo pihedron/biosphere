@@ -1,0 +1,290 @@
+:root {
+  color-scheme: light dark;
+  --light: white;
+  --dark: #171923;
+  --color: light-dark(var(--dark), var(--light));
+  --bg: light-dark(var(--light), var(--dark));
+  --accent: light-dark(#1a5fff, #4b83ff);
+  --normal: 16px;
+  --title: 64px;
+  --heading: 48px;
+  --subheading: 32px;
+  --nav: 64px;
+}
+
+*::selection {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--bg);
+  color: var(--color);
+  font-size: var(--normal);
+  font-family: 'Outfit';
+  font-weight: normal;
+  overflow-x: hidden;
+}
+
+button, a, textarea, input, select {
+  font-family: inherit;
+  font-size: var(--normal);
+  font-weight: normal;
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg);
+  z-index: 1;
+}
+
+header .auto {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  padding: 0 32px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: var(--nav);
+}
+
+nav a {
+  display: flex;
+  padding: 0 32px;
+  height: 100%;
+  border-radius: 8px;
+  transition: all 250ms;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+header #action {
+  width: 25%;
+}
+
+header button {
+  margin-inline: 8px;
+}
+
+footer {
+  background-color: var(--accent);
+}
+
+#mark {
+  font-size: var(--subheading);
+  color: var(--dark);
+}
+
+#biosphere {
+  color: var(--light);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+h1, h2, h3 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: inherit;
+  font-weight: 600;
+  margin-block-end: 0.25em;
+}
+
+h1 {
+  font-size: var(--title);
+}
+
+h2 {
+  font-size: var(--heading);
+}
+
+h3 {
+  font-size: var(--subheading);
+}
+
+p a {
+  position: relative;
+  color: transparent;
+  font-weight: bold;
+  background-color: var(--accent);
+  background-image: linear-gradient(to right, var(--color), var(--color));
+  background-position: 100%;
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-size 250ms ease-out;
+}
+
+p a:hover {
+  background-position: 0;
+  background-size: 100%;
+}
+
+p a:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: 0;
+  background: var(--accent);
+  height: 2px;
+  border-radius: 1px;
+  transition: width 250ms ease-out;
+}
+
+p a:hover:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+em {
+  color: var(--accent);
+}
+
+.auto {
+  box-sizing: border-box;
+  width: 1024px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  margin-top: var(--nav);
+}
+
+.slab {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 64px 32px;
+}
+
+.slab :is(h1, h2, h3) {
+  margin-block-start: 0;
+}
+
+.half {
+  width: 50%;
+}
+
+.half img {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+#pill {
+  margin: 0 0 8px;
+  padding: 4px 16px;
+  border: 2px solid var(--color);
+  border-radius: 100vmax;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#caption {
+  font-size: 20px;
+}
+
+#banner h1 {
+  margin-block: 0 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .auto {
+    width: 100%;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #logo {
+    display: none;
+  }
+
+  header .auto {
+    justify-content: center;
+    padding: 0;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  nav a {
+    padding: 0 24px;
+  }
+
+  .slab {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .half {
+    width: 100%;
+  }
+}
+
+.floating {
+  animation: float 500ms ease-in alternate infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
