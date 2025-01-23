@@ -58,7 +58,7 @@
       <li><strong>ERROR</strong> = image could not be classified</li>
     </ul>
   </div>
-  <input type="file" accept="image/*" id="image" capture on:change={change}/>
+  <input type="file" accept="image/*" id="image" capture="environment" on:change={change}/>
   <label for="image"> Upload </label>
   <img {src}>
   <div>{text}</div>

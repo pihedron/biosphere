@@ -147,6 +147,7 @@
 
 <style>
   #hero {
+    margin-top: var(--nav);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -185,6 +186,16 @@
     }
     100% {
       transform: rotate(-17deg) translateY(-0.5vw);
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    #hero h1 {
+      font-size: var(--heading);
+    }
+
+    #hero .subtitle {
+      font-size: var(--normal);
     }
   }
 </style>

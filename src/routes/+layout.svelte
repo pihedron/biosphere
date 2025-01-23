@@ -16,8 +16,8 @@
       href: '/tips',
     },
     {
-      name: 'Blog',
-      href: '/blog',
+      name: 'News',
+      href: '/news',
     },
     verified ? {
       name: 'Exit',
