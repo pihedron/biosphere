@@ -1,6 +1,6 @@
 # Biosphere
 
-Biosphere is a web application that calculates your carbon footprint, sorts your waste, and lets you report issues to your community.
+[Biosphere](https://biosphere.pages.dev) is a web application that calculates your carbon footprint, sorts your waste, and lets you report issues to your community.
 
 ## Inspiration
 
