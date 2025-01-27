@@ -6,6 +6,7 @@
 
   import * as THREE from 'three'
   import { createRenderer } from '$lib/three'
+  import { auth } from '$lib/firebase'
 
   let ready = false
   onMount(() => {
@@ -138,10 +139,35 @@
     <h2>Your Contribution</h2>
     <p>
       You can make this planet a better place by following some of our
-      sustainable <a href="/tips">tips</a> for reducing environmental
-      damage.
+      sustainable <a href="/tips">tips</a> for reducing environmental damage.
     </p>
-    <Button click={e => window.open('/tips', '_self')}>Let me help!</Button>
+    <Button click={(e) => window.open('/tips', '_self')}>Let me help!</Button>
+  </div>
+</section>
+<section class="auto slab start">
+  <div class="half">
+    <h2>Community Reports</h2>
+    <p>
+      Has someone dumped rubbish in your neighbourhood?
+      <a href="/join">Register</a>
+      an account and <a href="/report">report</a> the incident to your local community.
+      Let the whole city know what's happening.
+    </p>
+    {#if auth.currentUser}
+      <Button click={(e) => window.open('/report', '_self')}>
+        I have a report!
+      </Button>
+    {:else}
+      <Button click={(e) => window.open('/join', '_self')}>Sign me up!</Button>
+    {/if}
+  </div>
+  <div class="half">
+    <h2>Volunteers</h2>
+    <p>
+      Find the perfect opportunity to help out locals by visiting checking out
+      <a href="/nearby">nearby</a> reports.
+    </p>
+    <Button click={(e) => window.open('/join', '_self')}>What's nearby?</Button>
   </div>
 </section>
 
@@ -156,7 +182,7 @@
     box-sizing: border-box;
     padding: 0 32px 50vh;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - var(--nav));
     text-align: center;
     overflow: hidden;
   }

@@ -90,7 +90,12 @@ header button {
 }
 
 footer {
+  width: 100%;
   background-color: var(--accent);
+}
+
+section {
+  box-sizing: border-box;
 }
 
 #mark {
@@ -179,10 +184,19 @@ em {
   overflow: auto;
 }
 
+.full {
+  min-height: calc(100vh - var(--nav));
+}
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.start {
+  display: flex;
+  align-items: start !important;
 }
 
 .top {

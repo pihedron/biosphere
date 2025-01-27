@@ -16,8 +16,8 @@
       href: '/tips',
     },
     {
-      name: 'News',
-      href: '/news',
+      name: 'Nearby',
+      href: '/nearby',
     },
     verified ? {
       name: 'Exit',
