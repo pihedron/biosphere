@@ -31,7 +31,11 @@ The website not only serves content but also allows users to register accounts. 
 
 ### Community Reports
 
-Users can register an account and submit anonymous reports so that nearby volunteers can discover them. Volunteers within a 50 km distance of the incident location can then act on these reports.
+Users can register an account and submit anonymous reports so that nearby volunteers can discover them. Volunteers within a 50 km distance of the incident location can then act on these reports. Each report consists of a:
+- title
+- description
+- list of images
+- Google Maps embed pinpointing the location
 
 ## Challenges
 
