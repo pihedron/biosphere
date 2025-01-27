@@ -61,7 +61,7 @@
   <input type="file" accept="image/*" id="image" capture="environment" on:change={change}/>
   <label for="image"> Upload </label>
   <img {src}>
-  <div>{text}</div>
+  <div class="result">{text}</div>
 </div>
 
 <style>
@@ -98,5 +98,10 @@
     padding: 64px 32px;
     gap: 16px;
     height: 100vh;
+  }
+
+  .result {
+    margin: 16px 0;
+    font-size: var(--subheading);
   }
 </style>
