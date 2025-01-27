@@ -104,6 +104,7 @@
         content,
         images: imageUrls,
         location,
+        address,
         date,
         expiry: new Date(new Date(date).setMonth(date.getMonth() + 1)),
         uid: $store.user?.uid || 'anonymous',

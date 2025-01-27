@@ -37,9 +37,13 @@ Users can register an account and submit anonymous reports so that nearby volunt
 - list of images
 - Google Maps embed pinpointing the location
 
+### Responsive Design
+
+I intended this website to be usable on both mobile and desktop since users are much more likely to report incidents outside their homes when they only have access to their mobile phones.
+
 ## Challenges
 
-Initially, I intended this project to be a mobile application. However, I had to move my idea to a web application because targeting mobile devices introduced many complications that would make the development of my product slow. Though, making a website still came with its own set of challenges.
+Initially, I intended this project to be a mobile application. However, I had to move my idea to a web application because targeting mobile devices introduced many complications that would make the development of my product slow and limited my user base to just mobile users. Despite being faster, making a website came with its own set of challenges.
 
 ### Database
 

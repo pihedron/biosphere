@@ -259,8 +259,8 @@
   <h2>Your Carbon Footprint</h2>
   {#if carbonFootprint > 0}
     <p>
-      You release around {carbonFootprint.toFixed(2)} kg of equivalent CO
-      <sub>2</sub> in a day and {(carbonFootprint * 365).toFixed(0)} kg in a year.
+      You release around {carbonFootprint.toFixed(2)} kg of CO<sub>2</sub>
+      in a day and {(carbonFootprint * 365).toFixed(0)} kg in a year.
     </p>
   {:else}
     <p>

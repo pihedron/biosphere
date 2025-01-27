@@ -81,37 +81,40 @@
   {:else if reports.length === 0}
     <div class="no-reports">No nearby reports found.</div>
   {:else}
-    <section class="reports">
-      <h1>Nearby Reports</h1>
-      {#if reports.length === 0}
-        <p>There are no nearby reports.</p>
-      {/if}
-      {#each reports as report}
-        <div class="report-card">
-          <h2>{report.title}</h2>
-          <p>{report.content}</p>
-          {#if report.images && report.images.length > 0}
-            <div class="report-images">
-              {#each report.images as image}
-                <img src={image} alt="Incident report" />
-              {/each}
-            </div>
-          {/if}
-          <p>Locations are only approximate as they usually show the nearest street.</p>
-          <iframe
-            src="https://maps.google.com/maps?q={report.location.latitude},{report.location.longitude}&hl=es;z=14&amp;output=embed"
-          ></iframe>
-        </div>
-      {/each}
+    <section class="auto slab">
+      <div class="container">
+        <h1>Nearby Reports</h1>
+        {#if reports.length === 0}
+          <p>There are no nearby reports.</p>
+        {/if}
+        {#each reports as report}
+          <div class="report-card">
+            <h2>{report.title}</h2>
+            <p>{report.content}</p>
+            <iframe
+              title="map"
+              src="https://maps.google.com/maps?q={report.address}&hl=en&output=embed"
+            ></iframe>
+            {#if report.images && report.images.length > 0}
+              <p>Hold shift to scroll images horizontally on a computer.</p>
+              <div class="outer">
+                <div class="report-images">
+                  {#each report.images as image}
+                    <img src={image} alt="Incident report" />
+                  {/each}
+                </div>
+              </div>
+            {/if}
+          </div>
+        {/each}
+      </div>
     </section>
   {/if}
 </div>
 
 <style>
-  .reports {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 16px;
+  .container {
+    width: 100%;
   }
 
   .report-card {
@@ -125,16 +128,23 @@
     margin-block-start: 0;
   }
 
+  .outer {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
   .report-images {
     display: flex;
     gap: 8px;
-    margin-top: 8px;
     overflow-x: auto;
   }
 
+  .report-images::-webkit-scrollbar {
+    display: none;
+  }
+
   .report-images img {
-    max-width: 640px;
-    max-height: 480px;
+    height: 320px;
     object-fit: cover;
     border-radius: 8px;
   }
