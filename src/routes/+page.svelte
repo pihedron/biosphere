@@ -164,7 +164,7 @@
   <div class="half">
     <h2>Volunteers</h2>
     <p>
-      Find the perfect opportunity to help out locals by visiting checking out
+      Find the perfect opportunity to help out locals by checking out
       <a href="/nearby">nearby</a> reports.
     </p>
     <Button click={(e) => window.open('/join', '_self')}>What's nearby?</Button>
