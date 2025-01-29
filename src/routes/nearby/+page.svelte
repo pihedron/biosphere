@@ -13,9 +13,6 @@
   let loading = true
   let error: string | null = null
 
-  let latitude = 0
-  let longitude = 0
-
   function calculateBounds(lat: number, lng: number) {
     const latDegreePerKm = 1 / 111
     const lngDegreePerKm = 1 / (111 * Math.cos((lat * Math.PI) / 180))
