@@ -270,11 +270,70 @@
   {/if}
 </section>
 
+<div class="auto divider">
+  <h2>Reducing Your Carbon Footprint</h2>
+</div>
+<section class="auto slab">
+  <div class="half">
+    <h3>Travel Wisely</h3>
+    <p>
+      Instead of driving, consider walking or riding a bike to reduce greenhouse
+      gas emissions and boost your fitness. For longer distances, take a train
+      or bus. Living car-free can reduce your carbon footprint by up to 2 tons
+      of CO<sub>2</sub> equivalents per year.
+    </p>
+  </div>
+</section>
+<section class="auto slab">
+  <div class="half">
+    <h3>Keep Earth Clean</h3>
+    <p>
+      Garbage can severely pollute the air and contaminate water if not
+      discarded properly. Dispose your waste responsibly using our
+      <a href="/tips/recycling">waste sorter</a>
+      and participate in <a href="/nearby">local clean-ups</a> of public spaces.
+    </p>
+  </div>
+</section>
+<section class="auto slab">
+  <div class="half">
+    <h3>Reduce & Reuse</h3>
+    <p>
+      Always try to reduce, reuse, repair, and recycle as many products cause
+      carbon emissions at each step during its production. Protect the planet by
+      buying fewer things like clothes and shopping second-hand.
+    </p>
+  </div>
+</section>
+<section class="auto slab">
+  <div class="half">
+    <h3>Save Energy</h3>
+    <p>
+      A significant portion of our energy is powered by fossil fuels. Reduce
+      your energy consumption by decreasing your heating and cooling use,
+      switching to LED light bulbs, and hanging things to dry instead of using a
+      dryer. Improving your home's energy efficiency, through better insulation
+      or replacing your oil or gas furnace with an electric heat pump can reduce
+      your carbon footprint by up to 900 kg of CO<sub>2</sub> equivalents per year.
+    </p>
+  </div>
+</section>
+
 <style>
   section {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
+    margin: 0 auto;
+    padding: 32px;
+  }
+
+  .divider {
+    padding: 0 32px;
+    text-align: center;
+  }
+
+  .divider h2 {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
   }
 
   .trip-input,

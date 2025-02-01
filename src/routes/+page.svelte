@@ -129,8 +129,7 @@
     <h2>About</h2>
     <p>
       Our mission is to bring awareness of current environmental issues to the
-      public and help every individual make a difference to this world in their
-      daily lives.
+      public and help every individual make a difference in this world.
     </p>
   </div>
 </section>
